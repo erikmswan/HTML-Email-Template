@@ -1,0 +1,92 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# https://atom.io/docs/latest/using-atom-basic-customization#cson
+
+# HTML SNIPPETS
+
+'.text.html.basic':
+  'Email: table':
+    'prefix': 'tbl'
+    'body': """
+      <table width="$1" class="em_wrapper" align="center" cellpadding="0" cellspacing="0" border="0" style="width:$2px; font-family: Arial, Helvetica, sans-serif; font-size:14px; line-height:16px; text-align:left; background-color:#ffffff; margin-left:auto; margin-right:auto;">
+      $3
+      </table>
+      """
+  'Email: td':
+    'prefix': 'tde'
+    'body': """
+      <td valign="top" width="$1" style="width:$2px;font-family:Arial,sans-serif;font-size:14px;line-height:16px;text-align:left;color:#000000;background-color:#ffffff;"$3>
+      $4
+      </td>
+        """
+  'Email: td container':
+    'prefix': 'tdcon'
+    'body': """
+      <td valign="top"$1>
+      $2
+      </td>
+      """
+  'Email: td bullet':
+    'prefix': 'tdbull'
+    'body': """
+      <td valign="top" width="${1:15}"  style="width:${2:15}px;font-family:Arial,sans-serif;font-size:14px;line-height:16px;text-align:left;color:#000000;background-color:#ffffff;">
+      &bull;
+      </td>$3
+      """
+  'Email: vertical space td':
+    'prefix': 'vert'
+    'body': '<td height="${1:15}" style="font-size:1px;line-height:1px;mso-line-height-rule:exactly;">$2</td>$3'
+  'Email: vertical space td with colspan':
+    'prefix': 'vertcol'
+    'body': '<td height="${1:15}" style="font-size:1px;line-height:1px;mso-line-height-rule:exactly;" colspan="$2">$3</td>$4'
+  'Email: horizontal space td':
+    'prefix': 'hori'
+    'body': '<td width="${1:15}" style="font-size:1px;line-height:1px;mso-line-height-rule:exactly;">$2</td>$3'
+  'Email: horizontal space td with colspan':
+    'prefix': 'horicol'
+    'body': '<td width="${1:15}" style="font-size:1px;line-height:1px;mso-line-height-rule:exactly;" colspan="$2">$3</td>$4'
+  'Email: image':
+    'prefix': 'imge'
+    'body': '<img src="$1" width="$2" height="$3" style="display:block;margin-bottom:0;border:0;" alt="$4" />'
+  'Email: anchor tag':
+    'prefix': 'ae'
+    'body': '<a href="$1" target="_blank" style="text-decoration:none;color:#$2;">$3</a>'
+  'Email: span after anchor tag':
+    'prefix': 'spane'
+    'body': '<span style="color:#$1;">$2</span>'
+  'Email: sup tag':
+    'prefix': 'supe'
+    'body': '<sup style="font-size:11px;line-height:0;vertical-align:8px;">$1</sup>'
+  'Email: unicode trademark':
+    'prefix': 'tm'
+    'body': '™'
+  'Email: padding-top':
+    'prefix': 'pt'
+    'body': 'padding-top:$1px;$2'
+  'Email: padding-bottom':
+    'prefix': 'pb'
+    'body': 'padding-bottom:$1px;$2'
+  'Email: padding-right':
+    'prefix': 'pr'
+    'body': 'padding-right:$1px;$2'
+  'Email: padding-left':
+    'prefix': 'pl'
+    'body': 'padding-left:$1px;$2'

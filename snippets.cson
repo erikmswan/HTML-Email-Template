@@ -33,7 +33,7 @@
   'Email: td':
     'prefix': 'tde'
     'body': """
-      <td valign="top" width="$1" style="width:$2px;font-family:Arial,sans-serif;font-size:14px;line-height:16px;text-align:left;color:#000000;background-color:#ffffff;"$3>
+      <td valign="top" width="$1" style="width:$2px;font-family:Arial,sans-serif;font-size:14px;line-height:16px;text-align:left;color:#686868;background-color:#ffffff;"$3>
       $4
       </td>
         """
@@ -47,7 +47,7 @@
   'Email: td bullet':
     'prefix': 'tdbull'
     'body': """
-      <td valign="top" width="${1:15}"  style="width:${2:15}px;font-family:Arial,sans-serif;font-size:14px;line-height:16px;text-align:left;color:#000000;background-color:#ffffff;">
+      <td valign="top" width="${1:15}"  style="width:${2:15}px;font-family:Arial,sans-serif;font-size:14px;line-height:16px;text-align:left;color:#686868;background-color:#ffffff;">
       &bull;
       </td>$3
       """

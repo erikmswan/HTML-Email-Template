@@ -10,7 +10,8 @@ gulp.task('htmlmin', function () {
   gulp.src('src/*.html')
     .pipe(htmlmin({
         collapseWhitespace   : true,
-        conservativeCollapse : true
+        conservativeCollapse : true,
+        removeComments       : true
     }))
     .pipe(gulp.dest('dist'));
 });
@@ -30,6 +31,6 @@ gulp.task('default', ['htmlmin', 'imagemin']);
 
 /* WATCH --------------------*/
 gulp.task('watch', function() {
-  gulp.watch('*.html', ['htmlmin']);
-  gulp.watch('*.{jpg|png|gif}', ['imagemin']);
+  gulp.watch('src/*.html', ['htmlmin']);
+  gulp.watch('src/*.{jpg|png|gif}', ['imagemin']);
 });
